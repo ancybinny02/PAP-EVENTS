@@ -1,0 +1,163 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Use Inter as the primary font */
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navigation bar styles */
+/* ... (previous styles) ... */
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Make the navbar slightly transparent */
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left img {
+    height: 40px; /* Adjust the height to fit your logo */
+    margin-right: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #4c6177; /* Border color */
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-left: 20px;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #515151; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.search-bar button:hover {
+    background-color: #000000; /* Hover color */
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* ... (previous styles) ... */
+
+
+/* Landing page content styles */
+.landing-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.transparent-div {
+    width:100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.transparent-div h1 {
+    font-size: 48px;
+}
+
+/* Footer styles */
+/* ... (previous styles) ... */
+
+/* Footer styles with the same opacity as the header */
+.footer {
+    width:100%;
+    height: 250px;
+    background-color: rgba(32, 32, 32, 0.2); /* Adjust the opacity (0.7) as needed */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    padding: 20px;
+    min-height: 200px; /* Adjust the minimum height as needed */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 350px;
+}
+
+.footer-left,
+.footer-right,
+.footer-center {
+    flex: 1;
+}
+
+.footer-row {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-center .footer-row {
+    display: flex;
+    align-items: center;
+}
+
+.footer-center img {
+    margin-right: 30px; /*Space between icons*/
+    height: 35px; /* Adjust the height to fit your social media icons */
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.7; /* Adjust the opacity as needed */
+    flex-grow: 1;
+}
+
+/* ... (previous styles) ... */
