@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Sign.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission for now
+
+                // Get form fields
+                const email = form.querySelector('input[name="email"]');
+                const password = form.querySelector('input[name="password"]');
+                const confirmPassword = form.querySelector('input[name="confirmPassword"]');
+
+                // Basic validation checks
+            
+                if (!email.value.includes("@")) {
+                    Swal.fire("Error", "Email", "error");
+                    email.focus();
+                    return false;
+                }
+
+                if (password.value.length < 6) {
+                    Swal.fire("Error", "Password", "error");
+                    password.focus();
+                    return false;
+                }
+
+                if (password.value !== confirmPassword.value) {
+                    Swal.fire("Error", "Confirm Password", "error");
+                    confirmPassword.focus();
+                    return false;
+                }
+
+                // If all checks pass, show a success message
+                Swal.fire("Success", "Form submitted successfully!", "success");
+                // form.submit();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="registration-form">
+        <h2 style="color: white;">Sign Up</h2>
+        <center><p style="color: white;">Sign up to check for the events at <br>Christ(Deemed to be University)</p></center>
+        <form>
+            <label>
+                <input type="email" name="email" required placeholder="Email">
+            </label>
+            <label>
+                <input type="password" name="password" required placeholder="Password">
+            </label>
+            <label>
+                <input type="password" name="confirmPassword" required placeholder="Confirm Password">
+            </label><br>
+            <div class="courses-group">
+                <label style="color: white;font-size: medium;" >
+                    <input type="checkbox" name="Rememberme">Remember Me
+                </label><br>
+            </div>            
+            <center> <input type="submit" value="Submit"></center>
+        </form>
+    </div>
+</body>
+
+</html>
