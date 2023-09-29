@@ -1,0 +1,99 @@
+* {
+    background-color: black !important;
+    color: white !important;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="checkbox"],
+select {
+    width: 100% !important;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid pink;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+   
+
+}
+
+input[type="fname"]:focus,
+input[type="fname"]:focus,
+input[type="mobile"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+    border-color: plum;
+   
+}
+
+input[type="submit"] {
+    background-color: #3391ef !important;
+    color: #fff;
+    border: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+
+}
+
+input[type="submit"]:hover {
+    background-color: plum !important;
+}
+
+
+.registration-form {
+    display: block;
+}
+
+.email-input {
+    display: block !important;
+    width: 100% !important;
+}
+
+.links a {
+    color: white !important;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin: 1rem;
+}
+
+.links {
+    margin-top: 5rem;
+}
+
+button {
+    background-color: #3391ef !important;
+    color: #fff;
+    border: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 1rem !important;
+}
+
+button:hover {
+    background-color: plum !important;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Sign.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="registration-form">
+        <h2 style="color: white;">Sign Up</h2>
+        <center>
+            <p style="color: white;">Sign up to check for the events at <br>Christ(Deemed to be University)</p>
+        </center>
+        <form id="registration-form">
+            <label>
+                <input type="email" name="email" required placeholder="Email">
+            </label>
+            <label>
+                <input type="password" name="password" required placeholder="Password">
+            </label>
+            <label>
+                <input type="password" name="confirmPassword" required placeholder="Confirm Password">
+            </label><br>
+            <div class="courses-group">
+                <label style="color: white;font-size: medium;">
+                    <input type="checkbox" name="Rememberme">Remember Me
+                </label><br>
+            </div>
+            <center> <input type="submit" value="Submit"></center>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("registration-form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const email = form.querySelector('input[name="email"]').value;
+                const password = form.querySelector('input[name="password"]').value;
+
+                const user = {
+                    email,
+                    password
+                };
+
+                fetch("http://localhost:3000/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.message);
+                        Swal.fire("Success", "Form submitted successfully!", "success");
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        Swal.fire("Error", "Form submission failed.", "error");
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>
